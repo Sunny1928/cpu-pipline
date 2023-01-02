@@ -156,7 +156,7 @@ CO-mid_pipline
 
 |Name|工作內容|
 | :-----|:-----|
-|莊郁誼 | 程式架構設計（前半部）、撰寫、寫報告、Readme、makefile|
+|莊郁誼 |程式架構設計(前半部）、撰寫、寫報告、Readme、makefile|
 |廖怡誠 |程式架構設計(後半部）、撰寫、寫報告、Readme、makefile| 
 
 ## Contributors
