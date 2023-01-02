@@ -81,9 +81,13 @@ CO-mid_pipline
 <img src="https://github.com/Sunny1928/CO_mid_pipline/blob/main/Flow_Chart.png" width = "70%">
 
 &ensp;&ensp;&ensp;&ensp;程式主要分成三個部份，main、CPU_pipeline和五個階段IF、ID、EX、MEM、WB。<br>
+<br>
 &ensp;&ensp;&ensp;&ensp;我們將這次的專題實做成一個Class CPU_pipeline，使用者只需要從main將MIPS指令傳入class中，就可以得到對應的執行結果。<br>
+<br>
 &ensp;&ensp;&ensp;&ensp;實做的主體在於cycle階段執行的內容，我們將PC的更動和是否需要執行Stall的判斷，此安排是用來解決無法同步執行的問題，接著正式進入pipeline中，循環的順序為intoWB()->intoMEM()->inoEX()->intoID()->intIF()，這樣的安排是為了確保每次該階段執行時所拿的值，都是還沒被更新過的值，如果相反過來，就會出現像WB要拿MEM/WB register的值出來，但此暫存器的值已經被先執行的MEM更新，導致WB獲取的會是下一個cycle要用的值。<br>
+<br>
 &ensp;&ensp;&ensp;&ensp;在循環的過程中，我們將本來要在ID中判斷的beq改放到ID和EX之間，這樣設計的原因與前面新舊值影響的問題相同，且因為我們是將PC的更動放在cycle中，因此beq的判斷也放在同一層會比較好處理，可以透過改變index移動目標指令。<br>
+<br>
 &ensp;&ensp;&ensp;&ensp;不斷循環直到傳入的所有指令都執行完cycle function就會結束，並輸出結果。<br>
 
 ## 程式說明
