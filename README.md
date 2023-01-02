@@ -150,7 +150,7 @@ CO-mid_pipline
 
 ## 分工
 
-&ensp;&ensp;&ensp;&ensp;在討論完整體架構後，我們將工作分為前半部，架構撰寫包含pipelined的五個階段，後半部為beq和data hazard的判斷及彙整程式碼。會這樣分配的原因是從頭建立架構比較麻煩，所以將較麻煩的stall處理拆出來，順便進行程式碼的檢查並彙整。
+&ensp;&ensp;&ensp;&ensp;在討論完整體架構後，我們將工作分為前半部，架構撰寫包含pipelined的五個階段，後半部為beq和data hazard的判斷及彙整程式碼。會這樣分配的原因是從頭建立架構比較麻煩，所以將較麻煩的stall處理拆出來，順便進行程式碼的檢查並彙整。<br>
 &ensp;&ensp;&ensp;&ensp;其餘的報告、Readme、makefile均為兩人合力討論寫出來的內容。
 
 
