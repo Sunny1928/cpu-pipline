@@ -1,4 +1,6 @@
-# 2022計組期末專題 - CPU pipeline
+# CPU pipeline
+
+2022計組期末專題
 
 ## 環境
 * Ubuntu 22.04.1 LTS
